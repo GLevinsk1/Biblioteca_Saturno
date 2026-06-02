@@ -5,9 +5,12 @@
 }
 body {
   width: 100%;
-  height: 400vh;
+  height: 100vh;
   background-color: black;
+  display: flex;
+  flex-direction: column;
 }
+/*HEADER DO SITE*/
 header {
   width: 100%;
   height: clamp(95px, 12vw, 120px);
@@ -18,7 +21,7 @@ header {
   position: fixed;
   flex-wrap: nowrap;
   overflow: hidden;
-  background-image: url(icones/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTA1L3BmLXMxMjUtYWtlNzAwNS1hLmpwZw.webp);
+  background-color: rgb(59, 16, 4);
 }
 .icons {
   filter: invert(100%);
@@ -48,4 +51,60 @@ header {
 }
 .filtro::placeholder {
   text-align: center;
+}
+/*PARTE DE ADICIONAR OS LIVROS*/
+main {
+  height: 100%;
+  position: relative;
+  top: clamp(95px, 12vw, 120px);
+}
+.livros_container {
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 40px;
+}
+#btn_criar {
+  width: 30%;
+  height: clamp(320px, 20vh);
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  border-radius: 20px;
+  border: 10px dashed grey;
+}
+.card {
+  width: 30%;
+  height: clamp(320px, 20vh);
+  background-color: aliceblue;
+  border-radius: 20px;
+  border: 5px solid rgb(255, 0, 0);
+}
+@media (min-width: 1199px) {
+  .card {
+    width: 19%;
+  }
+  #btn_criar {
+    width: 19%;
+  }
+}
+@media (min-width: 1919px) {
+  .card {
+    width: 15%;
+  }
+  #btn_criar {
+    width: 15%;
+  }
+}
+.capa {
+  width: 100%;
+  height: 70%;
+}
+img.capa {
+  height: 100%;
+  object-fit: contain;
+}
+.conteudo {
+  width: 100%;
+  height: 30%;
 }
