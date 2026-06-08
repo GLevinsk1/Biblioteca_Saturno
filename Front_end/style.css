@@ -29,7 +29,7 @@ header {
   width: clamp(1.5rem, 4vw, 2.5rem);
   flex: 0 0 auto;
 }
-.input_titulo {
+.input_and_titulo {
   height: 100%;
   flex: 0.3;
   display: flex;
@@ -112,4 +112,64 @@ img.capa {
 .conteudo {
   width: 100%;
   height: 30%;
+}
+
+/*Pop up de criação de card*/
+
+.div_cadastrar_livro {
+  /*tamanho*/
+  height: 70%;
+  width: 90%;
+
+  /*posição do fundo pop up*/
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+
+  /*estilo*/
+  background-color: white;
+  border: 5px solid black;
+  border-radius: 40px;
+  box-shadow: 10px 10px 7px black;
+
+  overflow: visible;
+
+  display: none;
+}
+.form_cadastrar_livro {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+.btn_fechar {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  position: relative;
+  left: 93%;
+  background-color: transparent;
+  border: 0px;
+}
+/*input invisivel*/
+.input_capa {
+  display: none;
+}
+.btn_cadastrar_capa {
+  width: 60%;
+  height: 60%;
+  font-size: clamp(4rem, 10vw, 7rem);
+  border-radius: 20px;
+  border: 10px dashed grey;
+
+  /*centralizar simbolo de +*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.arquivo_escolhido {
+  width: 60%;
+  text-align: center;
+  font-size: 2rem;
 }
