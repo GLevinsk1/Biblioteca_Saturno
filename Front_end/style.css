@@ -1,0 +1,175 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+}
+/*HEADER DO SITE*/
+header {
+  width: 100%;
+  height: clamp(95px, 12vw, 120px);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  position: fixed;
+  flex-wrap: nowrap;
+  overflow: hidden;
+  background-color: rgb(59, 16, 4);
+}
+.icons {
+  filter: invert(100%);
+  height: auto;
+  width: clamp(1.5rem, 4vw, 2.5rem);
+  flex: 0 0 auto;
+}
+.input_and_titulo {
+  height: 100%;
+  flex: 0.3;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 0.5rem;
+}
+.titulo_principal {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  color: white;
+  white-space: nowrap;
+}
+.filtro {
+  border-radius: 40px;
+  height: clamp(32px, 4vw, 48px);
+  width: 100%;
+}
+.filtro::placeholder {
+  text-align: center;
+}
+/*PARTE DE ADICIONAR OS LIVROS*/
+main {
+  width: 100%;
+  height: 100%;
+  margin-top: clamp(95px, 12vw, 120px);
+  padding: 20px;
+  overflow-y: auto;
+}
+.livros_container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+#btn_criar {
+  width: 30%;
+  height: clamp(320px, 45vh, 400px);
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  border-radius: 20px;
+  border: 10px dashed grey;
+}
+.card {
+  width: 30%;
+  height: clamp(320px, 45vh, 400px);
+  background-color: aliceblue;
+  border-radius: 20px;
+  border: 5px solid rgb(255, 0, 0);
+}
+@media (min-width: 899px) {
+  .card {
+    width: 19%;
+    height: clamp(400px, 50vh, 500px);
+  }
+  #btn_criar {
+    width: 19%;
+    height: clamp(400px, 500px, 500px);
+  }
+}
+@media (min-width: 1919px) {
+  .card {
+    height: clamp(400px, 45vh, 500px);
+    width: 15%;
+  }
+  #btn_criar {
+    height: clamp(400px, 45vh, 500px);
+    width: 15%;
+  }
+}
+.capa {
+  width: 100%;
+  height: 70%;
+}
+img.capa {
+  height: 100%;
+  object-fit: contain;
+}
+.conteudo {
+  width: 100%;
+  height: 30%;
+}
+
+/*Pop up de criação de card*/
+
+.div_cadastrar_livro {
+  /*tamanho*/
+  height: 70%;
+  width: 90%;
+
+  /*posição do fundo pop up*/
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+
+  /*estilo*/
+  background-color: white;
+  border: 5px solid black;
+  border-radius: 40px;
+  box-shadow: 10px 10px 7px black;
+
+  overflow: visible;
+
+  display: none;
+}
+.form_cadastrar_livro {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+.btn_fechar {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  position: relative;
+  left: 93%;
+  background-color: transparent;
+  border: 0px;
+}
+/*input invisivel*/
+.input_capa {
+  display: none;
+}
+.btn_cadastrar_capa {
+  width: 60%;
+  height: 60%;
+  font-size: clamp(4rem, 10vw, 7rem);
+  border-radius: 20px;
+  border: 10px dashed grey;
+
+  /*centralizar simbolo de +*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.arquivo_escolhido {
+  width: 60%;
+  text-align: center;
+  font-size: 2rem;
+}

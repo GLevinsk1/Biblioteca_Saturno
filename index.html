@@ -4,16 +4,89 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="Front_end/style.css" />
   </head>
   <body>
+    <!--CABEÇALHO-->
     <header>
       <img class="icons" src="icones/planet-outline.svg" alt="" />
-      <div class="input_titulo">
+      <div class="input_and_titulo">
         <h1 class="titulo_principal">Biblioteca Saturno</h1>
         <input class="filtro" type="text" placeholder="Pesquisar" />
       </div>
       <img class="icons" src="icones/info.png" alt="" />
     </header>
+
+    <!--MEIO-->
+    <main>
+      <!--ESPAÇO PARA LIVROS-->
+      <section class="livros_container">
+        <button id="btn_criar"><strong>+</strong></button>
+      </section>
+    </main>
+
+    <!--CADASTRAR NOVO LIVRO-->
+    <div class="div_cadastrar_livro" id="div_cadastrar_livro">
+      <button class="btn_fechar" id="btn_fechar">X</button>
+      <form class="form_cadastrar_livro" action="">
+        <!--ADICIONAR CAPA-->
+        <label class="btn_cadastrar_capa" for="input_capa"
+          ><strong>+</strong></label
+        >
+        <input class="input_capa" id="input_capa" type="file" />
+        <p class="arquivo_escolhido">nenhum arquivo</p>
+
+        <!--INFORMAÇOES-->
+        <label for="input_titulo"><strong>Titulo</strong></label>
+        <input
+          type="text"
+          class="input_titulo"
+          id="input_titulo"
+          placeholder="O senhor dos anéis..."
+        />
+
+        <label for="input_autor">Autor</label>
+        <input
+          type="text"
+          class="input_autor"
+          id="input_autor"
+          placeholder="Tolkien..."
+        />
+
+        <label for="input_genero">Genero</label>
+        <input
+          type="text"
+          class="input_genero"
+          id="input_genero"
+          placeholder="Terror..."
+        />
+
+        <label for="input_paginas">Paginas</label>
+        <input
+          type="number"
+          class="input_paginas"
+          id="input_paginas"
+          placeholder="Numero de Paginas"
+        />
+        <span>
+          <label for="formato_kindle">Kindle</label>
+          <input type="checkbox" class="formato_kindle" id="formato_kindle" />
+
+          <label for="formato_fisico">Fisico</label>
+          <input type="checkbox" class="formato_fisico" id="formato_fisico" />
+
+          <label for="formato_audiobook">Audiobook</label>
+          <input
+            type="checkbox"
+            class="formato_audiobook"
+            id="formato_audiobook"
+          />
+        </span>
+        <button>Cadastrar</button>
+      </form>
+    </div>
+    <!--RODAPÉ-->
+    <footer></footer>
+    <script src="Front_end/script.js"></script>
   </body>
 </html>
