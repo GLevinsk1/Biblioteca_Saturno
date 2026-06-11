@@ -63,4 +63,3 @@ input_capa.addEventListener("change", function () {
     capa_preview.src = "";
   }
 });
-.
