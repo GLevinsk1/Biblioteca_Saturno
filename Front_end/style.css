@@ -162,14 +162,57 @@ img.capa {
   font-size: clamp(4rem, 10vw, 7rem);
   border-radius: 20px;
   border: 10px dashed grey;
-
-  /*centralizar simbolo de +*/
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  overflow: hidden;
 }
+<<<<<<< Updated upstream
+=======
+.preview_capa {
+  height: 100%;
+  aspect-ratio: 2 / 3;
+  display: none;
+}
+>>>>>>> Stashed changes
 .arquivo_escolhido {
   width: 60%;
   text-align: center;
   font-size: 2rem;
 }
+<<<<<<< Updated upstream
+=======
+.labels_and_inputs {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.input_infos {
+  height: 3rem;
+  width: 60%;
+  border-radius: 20px;
+  text-align: center;
+}
+.formato_livro {
+  height: 3rem;
+  width: 60%;
+  border-radius: 20px;
+  text-align: center;
+}
+.input_infos::placeholder {
+  text-align: center;
+}
+.btn_cadastrar_livro {
+  width: 40%;
+  height: 5em;
+  font-size: large;
+  border-radius: 50px;
+  align-self: flex-end;
+  border: 20px outset;
+}
+
+footer {
+  width: 100%;
+  height: clamp(300px, 25vw, 420px);
+  background-color: var(--marrom_padrao);
+  align-self: flex-end;
+}
+>>>>>>> Stashed changes

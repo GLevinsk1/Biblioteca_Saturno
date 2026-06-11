@@ -37,6 +37,7 @@
         <p class="arquivo_escolhido">nenhum arquivo</p>
 
         <!--INFORMAÇOES-->
+<<<<<<< Updated upstream
         <label for="input_titulo"><strong>Titulo</strong></label>
         <input
           type="text"
@@ -44,6 +45,17 @@
           id="input_titulo"
           placeholder="O senhor dos anéis..."
         />
+=======
+        <span class="labels_and_inputs"
+          ><label for="input_titulo"><strong>Titulo</strong></label>
+          <input
+            type="text"
+            class="input_titulo input_infos"
+            id="input_titulo"
+            placeholder="O senhor dos anéis..."
+            required
+        /></span>
+>>>>>>> Stashed changes
 
         <label for="input_autor">Autor</label>
         <input
@@ -61,6 +73,7 @@
           placeholder="Terror..."
         />
 
+<<<<<<< Updated upstream
         <label for="input_paginas">Paginas</label>
         <input
           type="number"
@@ -83,6 +96,18 @@
           />
         </span>
         <button>Cadastrar</button>
+=======
+        <select name="formato_livro" class="formato_livro" id="formato_livro">
+          <option disabled selected value="">Selecione o Formato</option>
+          <option value="Kindle">Kindle</option>
+          <option value="Fisico">Fisico</option>
+          <option value="Audiobook">Audiobook</option>
+        </select>
+
+        <button class="btn_cadastrar_livro" id="btn_cadastrar_livro">
+          Cadastrar &rarr;
+        </button>
+>>>>>>> Stashed changes
       </form>
     </div>
     <!--RODAPÉ-->
