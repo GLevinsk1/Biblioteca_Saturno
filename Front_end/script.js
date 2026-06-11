@@ -32,8 +32,6 @@ btn_fechar.addEventListener("click", function () {
     div_cadastrar_livro.style.display = "none";
   }
 });
-<<<<<<< Updated upstream
-=======
 
 //atualizar botão de cadastro para capa do livro
 const input_capa = document.getElementById("input_capa");
@@ -59,4 +57,3 @@ input_capa.addEventListener("change", function () {
     capa_preview.style.display = "none";
   }
 });
->>>>>>> Stashed changes
