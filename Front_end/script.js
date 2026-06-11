@@ -40,3 +40,26 @@ btn_fechar.addEventListener("click", function () {
     div_cadastrar_livro.style.display = "none";
   }
 });
+
+//atualizar botão de cadastro para capa do livro
+const input_capa = document.getElementById("input_capa");
+const btn_cadastrar_capa = document.getElementById("btn_cadastrar_capa");
+const arquivo_escolhido = document.getElementById("arquivo_escolhido");
+const capa_preview = document.getElementById("preview_capa");
+const leitor = new FileReader();
+
+input_capa.addEventListener("change", function () {
+  if (input_capa.files.length > 0) {
+    const arquivo = input_capa.files[0];
+
+    arquivo_escolhido.textContent = arquivo.name;
+
+    leitor.onload = function (e) {
+      capa_preview.src = e.target.result;
+    };
+    leitor.readAsDataURL(arquivo);
+  } else {
+    arquivo_escolhido.textContent = "nenhum arquivo";
+    capa_preview.src = "";
+  }
+});

@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Biblioteca Saturno</title>
     <link rel="stylesheet" href="Front_end/style.css" />
   </head>
   <body>
@@ -27,47 +27,52 @@
 
     <!--CADASTRAR NOVO LIVRO-->
     <div class="div_cadastrar_livro" id="div_cadastrar_livro">
-      <button class="btn_fechar" id="btn_fechar">X</button>
       <form class="form_cadastrar_livro" action="">
+        <h1 class="btn_fechar" id="btn_fechar">X</h1>
         <!--ADICIONAR CAPA-->
         <label class="btn_cadastrar_capa" for="input_capa"
-          ><strong>+</strong></label
-        >
+          ><img id="preview_capa" class="preview_capa" src="" alt=""
+        /></label>
         <input class="input_capa" id="input_capa" type="file" />
-        <p class="arquivo_escolhido">nenhum arquivo</p>
+        <p class="arquivo_escolhido" id="arquivo_escolhido">nenhum arquivo</p>
 
         <!--INFORMAÇOES-->
-        <label for="input_titulo"><strong>Titulo</strong></label>
-        <input
-          type="text"
-          class="input_titulo"
-          id="input_titulo"
-          placeholder="O senhor dos anéis..."
-        />
+        <span class="labels_and_inputs"
+          ><label for="input_titulo"><strong>Titulo</strong></label>
+          <input
+            type="text"
+            class="input_titulo input_infos"
+            id="input_titulo"
+            placeholder="O senhor dos anéis..."
+        /></span>
 
-        <label for="input_autor">Autor</label>
-        <input
-          type="text"
-          class="input_autor"
-          id="input_autor"
-          placeholder="Tolkien..."
-        />
+        <span class="labels_and_inputs"
+          ><label for="input_autor">Autor</label>
+          <input
+            type="text"
+            class="input_autor input_infos"
+            id="input_autor"
+            placeholder="Tolkien..."
+        /></span>
 
-        <label for="input_genero">Genero</label>
-        <input
-          type="text"
-          class="input_genero"
-          id="input_genero"
-          placeholder="Terror..."
-        />
+        <span class="labels_and_inputs"
+          ><label for="input_genero">Genero</label>
+          <input
+            type="text"
+            class="input_genero input_infos"
+            id="input_genero"
+            placeholder="Terror..."
+        /></span>
 
-        <label for="input_paginas">Paginas</label>
-        <input
-          type="number"
-          class="input_paginas"
-          id="input_paginas"
-          placeholder="Numero de Paginas"
-        />
+        <span class="labels_and_inputs"
+          ><label for="input_paginas">Paginas</label>
+          <input
+            type="number"
+            class="input_paginas input_infos"
+            id="input_paginas"
+            placeholder="Numero de Paginas"
+        /></span>
+
         <span>
           <label for="formato_kindle">Kindle</label>
           <input type="checkbox" class="formato_kindle" id="formato_kindle" />
@@ -82,11 +87,18 @@
             id="formato_audiobook"
           />
         </span>
-        <button>Cadastrar</button>
+        <button class="btn_cadastrar_livro" id="btn_cadastrar_livro">
+          Cadastrar &rarr;
+        </button>
       </form>
     </div>
     <!--RODAPÉ-->
-    <footer></footer>
+    <footer>
+      <span>
+        <img src="" alt="" />
+        <p></p>
+      </span>
+    </footer>
     <script src="Front_end/script.js"></script>
   </body>
 </html>
