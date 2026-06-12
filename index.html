@@ -31,21 +31,12 @@
       <form class="form_cadastrar_livro" action="">
         <!--ADICIONAR CAPA-->
         <label class="btn_cadastrar_capa" for="input_capa"
-          ><strong>+</strong></label
-        >
+          ><img class="preview_capa" id="preview_capa" src="" alt=""
+        /></label>
         <input class="input_capa" id="input_capa" type="file" />
-        <p class="arquivo_escolhido">nenhum arquivo</p>
+        <p class="arquivo_escolhido" id="arquivo_escolhido">nenhum arquivo</p>
 
         <!--INFORMAÇOES-->
-<<<<<<< Updated upstream
-        <label for="input_titulo"><strong>Titulo</strong></label>
-        <input
-          type="text"
-          class="input_titulo"
-          id="input_titulo"
-          placeholder="O senhor dos anéis..."
-        />
-=======
         <span class="labels_and_inputs"
           ><label for="input_titulo"><strong>Titulo</strong></label>
           <input
@@ -55,7 +46,6 @@
             placeholder="O senhor dos anéis..."
             required
         /></span>
->>>>>>> Stashed changes
 
         <label for="input_autor">Autor</label>
         <input
@@ -73,30 +63,6 @@
           placeholder="Terror..."
         />
 
-<<<<<<< Updated upstream
-        <label for="input_paginas">Paginas</label>
-        <input
-          type="number"
-          class="input_paginas"
-          id="input_paginas"
-          placeholder="Numero de Paginas"
-        />
-        <span>
-          <label for="formato_kindle">Kindle</label>
-          <input type="checkbox" class="formato_kindle" id="formato_kindle" />
-
-          <label for="formato_fisico">Fisico</label>
-          <input type="checkbox" class="formato_fisico" id="formato_fisico" />
-
-          <label for="formato_audiobook">Audiobook</label>
-          <input
-            type="checkbox"
-            class="formato_audiobook"
-            id="formato_audiobook"
-          />
-        </span>
-        <button>Cadastrar</button>
-=======
         <select name="formato_livro" class="formato_livro" id="formato_livro">
           <option disabled selected value="">Selecione o Formato</option>
           <option value="Kindle">Kindle</option>
@@ -107,7 +73,6 @@
         <button class="btn_cadastrar_livro" id="btn_cadastrar_livro">
           Cadastrar &rarr;
         </button>
->>>>>>> Stashed changes
       </form>
     </div>
     <!--RODAPÉ-->

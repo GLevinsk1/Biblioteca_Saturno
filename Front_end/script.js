@@ -48,9 +48,9 @@ input_capa.addEventListener("change", function () {
 
     leitor.onload = function (e) {
       capa_preview.src = e.target.result;
+      capa_preview.style.display = "block";
     };
     leitor.readAsDataURL(arquivo);
-    capa_preview.style.display = "block";
   } else {
     arquivo_escolhido.textContent = "nenhum arquivo";
     capa_preview.src = "";
