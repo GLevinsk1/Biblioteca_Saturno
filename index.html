@@ -47,22 +47,33 @@
             required
         /></span>
 
-        <label for="input_autor">Autor</label>
-        <input
-          type="text"
-          class="input_autor input_infos"
-          id="input_autor"
-          placeholder="Tolkien..."
-        />
+        <span class="labels_and_inputs"
+          ><label for="input_autor">Autor</label>
+          <input
+            type="text"
+            class="input_autor input_infos"
+            id="input_autor"
+            placeholder="Tolkien..."
+          />
+        </span>
 
-        <label for="input_genero">Genero</label>
-        <input
-          type="text"
-          class="input_genero input_infos"
-          id="input_genero"
-          placeholder="Terror..."
-        />
-
+        <span class="labels_and_inputs">
+          <label for="input_genero">Genero</label>
+          <input
+            type="text"
+            class="input_genero input_infos"
+            id="input_genero"
+            placeholder="Terror..."
+          />
+        </span>
+        <span class="labels_and_inputs">
+          <label for="input_paginas">Nº Paginas</label>
+          <input
+            type="number"
+            class="input_paginas input_infos"
+            id="input_paginas"
+          />
+        </span>
         <select name="formato_livro" class="formato_livro" id="formato_livro">
           <option disabled selected value="">Selecione o Formato</option>
           <option value="Kindle">Kindle</option>
