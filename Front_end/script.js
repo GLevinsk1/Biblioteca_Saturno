@@ -11,19 +11,14 @@ const btn_fechar = document.getElementById("btn_fechar");
 const input_titulo = document.getElementById("input_titulo");
 const input_autor = document.getElementById("input_autor");
 const input_genero = document.getElementById("input_genero");
-
-const formato_kindle = document.getElementById("formato_kindle");
-const formato_fisico = document.getElementById("formato_fisico");
-const formato_audiobook = document.getElementById("formato_audiobook");
+const formato_livro = document.getElementById("formato_livro");
 
 btn_fechar.addEventListener("click", function () {
   if (
     input_titulo.value !== "" ||
     input_autor.value !== "" ||
     input_genero.value !== "" ||
-    formato_kindle.checked ||
-    formato_fisico.checked ||
-    formato_audiobook.checked
+    formato_livro.value !== ""
   ) {
     if (window.confirm("voce pode ter dados não salvos deseja fechar ?")) {
       div_cadastrar_livro.style.display = "none";
@@ -31,10 +26,7 @@ btn_fechar.addEventListener("click", function () {
       input_titulo.value = "";
       input_autor.value = "";
       input_genero.value = "";
-
-      formato_kindle.checked = false;
-      formato_fisico.checked = false;
-      formato_audiobook.checked = false;
+      formato_livro.value = "";
     }
   } else {
     div_cadastrar_livro.style.display = "none";
@@ -58,8 +50,10 @@ input_capa.addEventListener("change", function () {
       capa_preview.src = e.target.result;
     };
     leitor.readAsDataURL(arquivo);
+    capa_preview.style.display = "block";
   } else {
     arquivo_escolhido.textContent = "nenhum arquivo";
     capa_preview.src = "";
+    capa_preview.style.display = "none";
   }
 });
