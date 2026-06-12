@@ -133,12 +133,11 @@ img.capa {
   border-radius: 40px;
   box-shadow: 10px 10px 7px black;
 
-  overflow: visible;
+  overflow: hidden scroll;
 
   display: none;
 }
 .form_cadastrar_livro {
-  height: 100%;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -158,7 +157,7 @@ img.capa {
 }
 .btn_cadastrar_capa {
   width: 60%;
-  height: 60%;
+  aspect-ratio: 2 /3;
   font-size: clamp(4rem, 10vw, 7rem);
   border-radius: 20px;
   border: 10px dashed grey;
