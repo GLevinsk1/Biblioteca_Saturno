@@ -28,12 +28,24 @@
     <!--CADASTRAR NOVO LIVRO-->
     <div class="div_cadastrar_livro" id="div_cadastrar_livro">
       <button class="btn_fechar" id="btn_fechar">X</button>
-      <form class="form_cadastrar_livro" action="">
+
+      <form
+        class="form_cadastrar_livro"
+        action="Back_end/cadastro.php"
+        method="post"
+        enctype="multipart/form-data"
+      >
         <!--ADICIONAR CAPA-->
         <label class="btn_cadastrar_capa" for="input_capa"
           ><img class="preview_capa" id="preview_capa" src="" alt=""
         /></label>
-        <input class="input_capa" id="input_capa" type="file" />
+        <input
+          class="input_capa"
+          id="input_capa"
+          type="file"
+          name="capa_livro"
+          accept=".png, .jpg, .webp, .jpeg, .svg"
+        />
         <p class="arquivo_escolhido" id="arquivo_escolhido">nenhum arquivo</p>
 
         <!--INFORMAÇOES-->
@@ -44,6 +56,7 @@
             class="input_titulo input_infos"
             id="input_titulo"
             placeholder="O senhor dos anéis..."
+            name="titulo_livro"
             required
         /></span>
 
@@ -54,6 +67,7 @@
             class="input_autor input_infos"
             id="input_autor"
             placeholder="Tolkien..."
+            name="autor_livro"
           />
         </span>
 
@@ -64,6 +78,7 @@
             class="input_genero input_infos"
             id="input_genero"
             placeholder="Terror..."
+            name="genero_livro"
           />
         </span>
         <span class="labels_and_inputs">
@@ -72,6 +87,7 @@
             type="number"
             class="input_paginas input_infos"
             id="input_paginas"
+            name="paginas_livro"
           />
         </span>
         <select name="formato_livro" class="formato_livro" id="formato_livro">
@@ -81,7 +97,11 @@
           <option value="Audiobook">Audiobook</option>
         </select>
 
-        <button class="btn_cadastrar_livro" id="btn_cadastrar_livro">
+        <button
+          type="submit"
+          class="btn_cadastrar_livro"
+          id="btn_cadastrar_livro"
+        >
           Cadastrar &rarr;
         </button>
       </form>
